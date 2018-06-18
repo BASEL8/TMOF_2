@@ -816,7 +816,7 @@ button {
 
 div#bloc-5 {
     height: auto;
-    padding: 200px 100px;
+    padding: 200px 50px;
 }
 
 #bloc-5>* {
@@ -1011,6 +1011,11 @@ a {
 }
 
 @media (max-width: 991px) {
+    #bloc-3 iframe,
+    #bloc-3 .item,
+    #bloc-2 .item {
+        padding: 0
+    }
     #bloc-5 {
         padding: 10px 10px;
     }
@@ -1045,7 +1050,7 @@ a {
         width: 85%;
         margin: 0 auto;
         display: block;
-        height: 561px;
+        height: auto;
     }
     #bloc-2 img {
         width: 100%;
@@ -1071,7 +1076,7 @@ a {
     }
     #bloc-1 .carousel-caption {
         right: auto;
-        left: 45px;
+        left: 25px;
         width: 70%;
     }
     .carousel-caption>* {
