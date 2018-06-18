@@ -1,0 +1,1338 @@
+/*-----------------------------------------------------------------------------------
+	    (null)
+        Built with Blocs
+-----------------------------------------------------------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#nav {
+    background-color: transparent;
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    width: 80px;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 22;
+}
+
+#nav i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: #FF0000;
+}
+
+#nav div svg {
+    width: 180px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    color: white;
+}
+
+#nav .menu ul {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.navShadow {
+    box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
+    height: 100px;
+}
+
+#word-mark {
+    opacity: 0;
+}
+
+#nav .menu ul li {
+    margin: 0 auto;
+    text-align: center;
+    margin: 20px;
+}
+
+#nav .menu ul li a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #FF0000;
+    font-weight: 900;
+}
+
+#nav:hover {
+    width: 300px;
+    transition: all .1s;
+    background-color: white;
+}
+
+#nav:hover ul {
+    display: block;
+}
+
+#nav:hover i {
+    display: none;
+}
+
+a,
+button {
+    transition: all .3s ease-in-out;
+    outline: none!important;
+}
+
+
+/* Prevent ugly blue glow on chrome and safari */
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#page-loading-blocs-notifaction {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100000;
+    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+}
+
+
+/* = Blocs
+-------------------------------------------------------------- */
+
+.bloc {
+    width: 100%;
+    height: 100vh;
+    clear: both;
+    background: 50% 50% no-repeat;
+    padding: 0 50px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.bloc .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* Sizes */
+
+.bloc-lg {}
+
+.bloc-sm {}
+
+
+/* = Full Screen Blocs 
+-------------------------------------------------------------- */
+
+.bloc-fill-screen {
+    padding-top: 0;
+    position: relative;
+    height: 100vh;
+}
+
+.bloc-fill-screen>.container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.bloc-fill-screen .fill-bloc-top-edge,
+.bloc-fill-screen .fill-bloc-bottom-edge {
+    position: absolute;
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: none;
+}
+
+.bloc-fill-screen .fill-bloc-top-edge {
+    top: 0;
+}
+
+.bloc-fill-screen .fill-bloc-bottom-edge {
+    top: initial;
+    bottom: 20px;
+}
+
+.blocs-hero-btn-dwn {
+    width: 58px;
+    height: 58px;
+    display: block;
+    margin: 0 auto;
+    line-height: 58px;
+    padding: 0;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, .8);
+    background: rgba(0, 0, 0, .6);
+    border: 0;
+}
+
+.blocs-hero-btn-dwn:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* = Full Width Blocs 
+-------------------------------------------------------------- */
+
+.full-width-bloc {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.full-width-bloc .container {
+    width: 100%;
+    max-width: 100%!important;
+}
+
+.img_float_right {
+    width: 200px;
+    height: 100vh;
+    float: right;
+    overflow: hidden;
+}
+
+.carousel-control {
+    position: static;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+}
+
+.carousel_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-bottom: 20px;
+    background-color: #0096506e;
+    padding: 0 0 75px 0;
+}
+
+.full-width-bloc .carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.full-width-bloc .carousel iframe {
+    width: 100%;
+    height: auto;
+}
+
+#bloc-1 .carousel img {
+    width: auto;
+    height: 100%;
+}
+
+#bloc-1 .carousel-caption {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    left: 90px;
+    z-index: 10;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    text-shadow: none;
+}
+
+.full-width-bloc .navbar {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+/* Background Styles */
+
+.bg-center,
+.bg-l-edge,
+.bg-r-edge,
+.bg-t-edge,
+.bg-b-edge,
+.bg-tl-edge,
+.bg-bl-edge,
+.bg-tr-edge,
+.bg-br-edge,
+.bg-repeat {
+    -webkit-background-size: auto!important;
+    -moz-background-size: auto!important;
+    -o-background-size: auto!important;
+    background-size: auto!important;
+}
+
+
+/* Video Background Styles */
+
+.video-bg-container,
+.bloc-video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: -50%;
+    overflow: hidden;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.bloc-video {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+
+
+/* Dark theme */
+
+.d-bloc {
+    color: rgba(255, 255, 255, .7);
+}
+
+.d-bloc button:hover {
+    color: rgba(255, 255, 255, .9);
+}
+
+.d-bloc .icon-round,
+.d-bloc .icon-square,
+.d-bloc .icon-rounded,
+.d-bloc .icon-semi-rounded-a,
+.d-bloc .icon-semi-rounded-b {
+    border-color: rgba(255, 255, 255, .9);
+}
+
+.d-bloc .divider-h span {
+    border-color: rgba(255, 255, 255, .2);
+}
+
+.d-bloc .a-btn,
+.d-bloc .navbar a,
+.d-bloc .navbar-brand,
+.d-bloc a .icon-sm,
+.d-bloc a .icon-md,
+.d-bloc a .icon-lg,
+.d-bloc a .icon-xl,
+.d-bloc h1 a,
+.d-bloc h2 a,
+.d-bloc h3 a,
+.d-bloc h4 a,
+.d-bloc h5 a,
+.d-bloc h6 a,
+.d-bloc p a {
+    color: rgba(255, 255, 255, .6);
+}
+
+.d-bloc .a-btn:hover,
+.d-bloc .navbar a:hover,
+.d-bloc .navbar-brand:hover,
+.d-bloc a:hover .icon-sm,
+.d-bloc a:hover .icon-md,
+.d-bloc a:hover .icon-lg,
+.d-bloc a:hover .icon-xl,
+.d-bloc h1 a:hover,
+.d-bloc h2 a:hover,
+.d-bloc h3 a:hover,
+.d-bloc h4 a:hover,
+.d-bloc h5 a:hover,
+.d-bloc h6 a:hover,
+.d-bloc p a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.d-bloc .navbar-toggle .icon-bar {
+    background: rgba(255, 255, 255, 1);
+}
+
+.d-bloc .btn-wire,
+.d-bloc .btn-wire:hover {
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.d-bloc .panel {
+    color: rgba(0, 0, 0, .5);
+}
+
+.d-bloc .panel button:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
+.d-bloc .panel icon {
+    border-color: rgba(0, 0, 0, .7);
+}
+
+.d-bloc .panel .divider-h span {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.d-bloc .panel .a-btn {
+    color: rgba(0, 0, 0, .6);
+}
+
+.d-bloc .panel .a-btn:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.d-bloc .panel .btn-wire,
+.d-bloc .panel .btn-wire:hover {
+    color: rgba(0, 0, 0, .7);
+    border-color: rgba(0, 0, 0, .3);
+}
+
+
+/* Light theme */
+
+.d-bloc .panel,
+.l-bloc {
+    color: rgba(0, 0, 0, .5);
+}
+
+.d-bloc .panel button:hover,
+.l-bloc button:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
+.l-bloc .icon-round,
+.l-bloc .icon-square,
+.l-bloc .icon-rounded,
+.l-bloc .icon-semi-rounded-a,
+.l-bloc .icon-semi-rounded-b {
+    border-color: rgba(0, 0, 0, .7);
+}
+
+.d-bloc .panel .divider-h span,
+.l-bloc .divider-h span {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.d-bloc .panel .a-btn,
+.l-bloc .a-btn,
+.l-bloc .navbar a,
+.l-bloc .navbar-brand,
+.l-bloc a .icon-sm,
+.l-bloc a .icon-md,
+.l-bloc a .icon-lg,
+.l-bloc a .icon-xl,
+.l-bloc h1 a,
+.l-bloc h2 a,
+.l-bloc h3 a,
+.l-bloc h4 a,
+.l-bloc h5 a,
+.l-bloc h6 a,
+.l-bloc p a {
+    color: rgba(0, 0, 0, .6);
+}
+
+.d-bloc .panel .a-btn:hover,
+.l-bloc .a-btn:hover,
+.l-bloc .navbar a:hover,
+.l-bloc .navbar-brand:hover,
+.l-bloc a:hover .icon-sm,
+.l-bloc a:hover .icon-md,
+.l-bloc a:hover .icon-lg,
+.l-bloc a:hover .icon-xl,
+.l-bloc h1 a:hover,
+.l-bloc h2 a:hover,
+.l-bloc h3 a:hover,
+.l-bloc h4 a:hover,
+.l-bloc h5 a:hover,
+.l-bloc h6 a:hover,
+.l-bloc p a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.l-bloc .navbar-toggle .icon-bar {
+    color: rgba(0, 0, 0, .6);
+}
+
+.d-bloc .panel .btn-wire,
+.d-bloc .panel .btn-wire:hover,
+.l-bloc .btn-wire,
+.l-bloc .btn-wire:hover {
+    color: rgba(0, 0, 0, .7);
+    border-color: rgba(0, 0, 0, .3);
+}
+
+
+/* Bloc text custom styling */
+
+
+/* = NavBar
+-------------------------------------------------------------- */
+
+.navbar {
+    margin-bottom: 0;
+    z-index: 1;
+}
+
+.navbar-brand {
+    height: auto;
+    padding: 3px 15px;
+    font-size: 25px;
+    font-weight: normal;
+    font-weight: 600;
+    line-height: 44px;
+}
+
+.navbar-brand img {
+    max-height: 200px;
+    margin: 0 5px 0 0;
+    display: inline;
+}
+
+.navbar-brand img[src$=svg] {
+    min-width: 100px;
+}
+
+.nav-center .navbar-brand img {
+    margin: 0;
+}
+
+.navbar .nav {
+    padding-top: 2px;
+    margin-right: -16px;
+    float: right;
+    z-index: 1;
+}
+
+.nav>li {
+    float: left;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.navbar-nav .open .dropdown-menu>li>a {
+    text-align: inherit;
+}
+
+.nav>li a:hover,
+.nav>li a:focus {
+    background: transparent;
+}
+
+.navbar-toggle {
+    margin: 10px 10px 0 0;
+    border: 0px;
+}
+
+.navbar-toggle:hover {
+    background: transparent!important;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: rgba(0, 0, 0, .5);
+    width: 26px;
+}
+
+
+/* Inverted navbar */
+
+.nav-invert .navbar .nav {
+    float: left;
+}
+
+.nav-invert .navbar-header,
+.nav-invert .navbar-brand {
+    float: right;
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .carousel-caption {
+        left: 150px;
+        padding-bottom: 30px;
+        top: 100px;
+        width: 48%;
+    }
+    #bloc-4 .carousel-caption {
+        width: none;
+        height: 100%;
+    }
+    .site-navigation {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate(0, -50%);
+        -webkit-transform: translateY(-50%);
+    }
+    .nav>li .dropdown-menu a,
+    .nav>li .dropdown-menu a:hover {
+        color: #484848;
+    }
+    .nav-invert .site-navigation {
+        left: 0;
+        right: 0;
+    }
+    .nav-center {
+        text-align: center;
+    }
+    .nav-center .navbar-header {
+        width: 100%;
+    }
+    .nav-center .navbar-header,
+    .nav-center .navbar-brand,
+    .nav-center .nav>li {
+        float: none;
+        display: inline-block;
+    }
+    .nav-center .site-navigation {
+        position: relative;
+        width: 100%;
+        right: 0;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+    .nav-center.mini-nav .navbar-toggle {
+        float: none;
+        margin: 10px auto 0;
+    }
+}
+
+.nav>li>.dropdown a {
+    background: none!important;
+    display: block;
+    padding: 14px 15px;
+}
+
+nav .caret {
+    margin: 0 5px;
+}
+
+
+/* Dropdown Menus SubMenu */
+
+.dropdown-menu .dropdown-menu {
+    top: -8px;
+    left: 100%;
+}
+
+.dropdown-menu .dropmenu-flow-right {
+    top: 100%;
+    left: 0;
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.dropdown-menu .dropdown span {
+    border: 4px solid black;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    margin: 6px -5px 0 0!important;
+    float: right;
+}
+
+
+/* = Bric adjustment margins
+-------------------------------------------------------------- */
+
+.mg-md {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* = Buttons
+-------------------------------------------------------------- */
+
+.btn {
+    margin: 0 5px 5px 0;
+}
+
+.btn.pull-right {
+    margin: 0 0 5px 5px;
+}
+
+.btn-d,
+.btn-d:hover,
+.btn-d:focus {
+    color: #FFF;
+    background: rgba(0, 0, 0, .3);
+}
+
+
+/* Prevent ugly blue glow on chrome and safari */
+
+button {
+    outline: none!important;
+}
+
+.panel-sq,
+.panel-sq .panel-heading,
+.panel-sq .panel-footer {
+    border-radius: 0;
+}
+
+.panel-rd {
+    border-radius: 30px;
+}
+
+.panel-rd .panel-heading {
+    border-radius: 29px 29px 0 0;
+}
+
+.panel-rd .panel-footer {
+    border-radius: 0 0 29px 29px;
+}
+
+
+/* = Forms
+-------------------------------------------------------------- */
+
+.form-control {
+    border-color: rgba(0, 0, 0, .1);
+    box-shadow: none;
+}
+
+
+/* = Carousel
+-------------------------------------------------------------- */
+
+#bloc-1 .carousel-indicators {
+    left: 40%;
+    bottom: 100px;
+}
+
+#bloc-1 .carousel-indicators .active {
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
+    margin: 0;
+    color: #009650;
+    background-color: transparent;
+}
+
+#bloc-1 ol.carousel-indicators {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#bloc-1 .carousel-indicators li {
+    text-indent: 0;
+    border: 0;
+    padding: 10px 20px;
+    height: auto;
+    width: auto;
+    color: #FF0000;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+#bloc-2 img {
+    width: 50%;
+    padding-top: 50px;
+}
+
+#bloc-3 iframe {
+    width: 50%;
+    padding: 100px 0 200px 0;
+    margin: 0 auto;
+    display: block;
+    height: 700px;
+}
+
+#bloc-3 .item,
+#bloc-2 .item {
+    padding-top: 100px;
+}
+
+#bloc-4 .carousel-indicators {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#bloc-4 .carousel-indicators li {
+    text-indent: 0;
+    border: 0;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+#bloc-4 .carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: transparent;
+}
+
+#bloc-4 .test {
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    padding: 10px 10px;
+    width: 65%;
+    position: relative;
+    top: 10%;
+    border: 1px solid black;
+}
+
+#bloc-4 .test>* {
+    text-align: left;
+}
+
+#bloc-4 .test .carousel-caption {
+    background-color: #009650;
+    position: static;
+    text-align: left;
+    height: 425px;
+}
+
+div#bloc-5 {
+    height: auto;
+    padding: 200px 100px;
+}
+
+#bloc-5>* {
+    color: #009650;
+}
+
+#bloc-5 input,
+#bloc-5 textarea {
+    border: 1px solid #009650;
+}
+
+#bloc-5 button {
+    border: 1px solid #FF0000;
+    background-color: transparent;
+    color: #FF0000;
+}
+
+#bloc-2 ol {
+    display: none;
+}
+
+#bloc-3 ol {
+    display: none;
+}
+
+.carousel {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.full-width-bloc .carousel {
+    width: 100%;
+}
+
+.carousel .item img {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.carousel-control span {
+    z-index: 5;
+    display: inline-block;
+    font-size: 25px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: normal;
+}
+
+.carousel-control {
+    color: #FF0000!important;
+    text-shadow: none;
+}
+
+.carousel-caption h1 {
+    font-size: 40px;
+    letter-spacing: 1.5px
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: normal
+}
+
+.carousel-indicators {
+    width: auto;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    transform: translateX(-50%);
+}
+
+.no-shadows .carousel-control.left,
+.no-shadows .carousel-control.right {
+    background-image: none;
+    width: 100px;
+}
+
+.hide-indicators {
+    display: none;
+}
+
+
+/* ScrollToTop button */
+
+.scrollToTop {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    z-index: 500;
+    transition: all .3s ease-in-out;
+}
+
+.scrollToTop span {
+    margin-top: 6px;
+}
+
+.showScrollTop {
+    font-size: 14px;
+    opacity: 1;
+}
+
+
+/* = Custom Styling
+-------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+.btn,
+a {
+    font-family: "Helvetica";
+}
+
+.container {
+    max-width: 1170px;
+}
+
+
+/* = Colour
+-------------------------------------------------------------- */
+
+
+/* Background colour styles */
+
+.bgc-white {
+    background-color: #ffffff;
+}
+
+
+/* Bloc image backgrounds */
+
+.bg-map-overlay {
+    background-image: url("img/map-overlay.png");
+}
+
+
+/* = Mobile adjustments 
+-------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .bloc {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .bloc.full-width-bloc,
+    .bloc-tile-2.full-width-bloc .container,
+    .bloc-tile-3.full-width-bloc .container,
+    .bloc-tile-4.full-width-bloc .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .navbar .nav {
+        max-width: 80%
+    }
+    .nav-center.navbar .nav {
+        max-width: 100%
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .b-parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .b-parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 991px) {
+    #bloc-5 {
+        padding: 10px 10px;
+    }
+    #nav {
+        width: 45px;
+    }
+    #nav div svg {
+        width: 108px
+    }
+    #nav:hover {
+        width: 150px;
+        transition: all .1s;
+        background-color: white;
+    }
+    #nav .menu ul li a {
+        font-size: 20px;
+    }
+    #bloc-4 .test .carousel-caption {
+        height: auto;
+    }
+    .row {
+        margin: 0;
+    }
+    .col-sm-12 {
+        padding: 0;
+    }
+    .carousel_div {
+        width: 100px;
+        padding: 75px 10px;
+    }
+    #bloc-3 iframe {
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+        height: 561px;
+    }
+    #bloc-2 img {
+        width: 100%;
+        padding: 0;
+    }
+    #bloc-3 img {
+        width: 100%;
+        padding: 0;
+    }
+    #bloc-4 {}
+    #bloc-4 ol {
+        bottom: -100px;
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #bloc-4 ol li .active {}
+    #bloc-1 ol.carousel-indicators {
+        display: none;
+    }
+    #bloc-1 .carousel {
+        height: 700px;
+    }
+    #bloc-1 .carousel-caption {
+        right: auto;
+        left: 45px;
+        width: 70%;
+    }
+    .carousel-caption>* {
+        background-color: rgba(128, 128, 128, 0.301);
+        padding: 10px;
+    }
+    .carousel-caption h1 {
+        font-size: 30px;
+        letter-spacing: 1.5px;
+        color: white;
+    }
+    .carousel-caption p {
+        font-size: 15px;
+        font-weight: normal;
+        color: white;
+    }
+    .carousel-control.right {
+        right: 2px;
+        left: auto;
+    }
+    .carousel-control span {
+        z-index: 5;
+        display: inline-block;
+        font-size: 15px;
+        border: 1px solid #FF0000;
+        padding: 5px 8px;
+        border-radius: 50%;
+        text-align: center;
+        font-weight: normal;
+    }
+    .carousel-control.left {
+        right: 20px;
+        left: auto;
+    }
+    .img_float_right {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .b-parallax {
+        background-attachment: scroll;
+    }
+    .page-container,
+    #hero-bloc {
+        overflow-x: hidden;
+        position: relative;
+    }
+    /* Prevent unwanted side scroll on mobile */
+    .bloc {
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
+    /* iPhone X Notch Support*/
+    .bloc-group,
+    .bloc-group .bloc {
+        display: block;
+        width: 100%;
+    }
+    .bloc-fill-screen .fill-bloc-top-edge,
+    .bloc-fill-screen .fill-bloc-bottom-edge {
+        padding: 0 20px;
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
+}
+
+@media (max-width: 767px) {
+    .page-container {
+        overflow-x: hidden;
+        position: relative;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    #disqus_thread {
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+    .b-parallax {
+        background-attachment: scroll;
+    }
+    .navbar .nav {
+        padding-top: 0;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        float: none!important;
+    }
+    .navbar.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .site-navigation {
+        position: inherit;
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+    }
+    .nav>li {
+        margin-top: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        background: rgba(0, 0, 0, .05);
+        text-align: left;
+        padding-left: 15px;
+        width: 100%;
+    }
+    .nav>li:hover {
+        background: rgba(0, 0, 0, .08);
+    }
+    .dropdown .dropdown a .caret {
+        float: none;
+        margin: 5px 0 0 10px!important;
+        border: 4px solid black;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+    #hero-bloc .navbar .nav {
+        background: rgba(0, 0, 0, .8);
+    }
+    #hero-bloc .navbar .nav a {
+        color: rgba(255, 255, 255, .6);
+    }
+    .hero {
+        padding: 50px 0;
+    }
+    .hero-nav {
+        left: -1px;
+        right: -1px;
+    }
+    .navbar-collapse {
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-brand img {
+        max-height: 40px;
+        width: auto;
+    }
+    .nav-invert .navbar-header {
+        float: none;
+        width: 100%;
+    }
+    .nav-invert .navbar-toggle {
+        float: left;
+        margin-left: 10px;
+    }
+    .bloc {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .bloc-xxl,
+    .bloc-xl,
+    .bloc-lg {
+        padding: 0;
+    }
+    .bloc-sm,
+    .bloc-md {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .bloc-tile-2 .container,
+    .bloc-tile-3 .container,
+    .bloc-tile-4 .container,
+    .bloc-fill-screen .fill-bloc-top-edge,
+    .bloc-fill-screen .fill-bloc-bottom-edge {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .a-block {
+        padding: 0 10px;
+    }
+    .btn-dwn {
+        display: none;
+    }
+    .voffset {
+        margin-top: 5px;
+    }
+    .voffset-md {
+        margin-top: 20px;
+    }
+    .voffset-lg {
+        margin-top: 30px;
+    }
+    form {
+        padding: 5px;
+    }
+    .close-lightbox {
+        display: inline-block;
+    }
+    .video-bg-container {
+        display: none;
+    }
+    .blocsapp-device-iphone5 {
+        background-size: 216px 425px;
+        padding-top: 60px;
+        width: 216px;
+        height: 425px;
+    }
+    .blocsapp-device-iphone5 img {
+        width: 180px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 400px) {
+    .bloc {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    div[class^="col-"],
+    div[class*=" col-"] {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .full-width-bloc div[class^="col-"],
+    .full-width-bloc div[class*=" col-"] {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+/* Drop Down Navigation */
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .mini-nav .special-dropdown-nav .site-navigation {
+        display: block;
+        position: absolute;
+        top: 80%;
+        z-index: 1000;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        font-size: 14px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    }
+    .mini-nav .special-dropdown-nav .site-navigation li {
+        width: 100%;
+    }
+    .special-dropdown-nav.collapsing {
+        transition: height 0.001s;
+    }
+    .mini-nav .special-dropdown-nav .site-navigation li a {
+        color: rgba(0, 0, 0, .6)!important;
+    }
+}
